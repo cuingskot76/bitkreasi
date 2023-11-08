@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <nav
       className="max-w-[1512px] font-medium mx-auto px-10 py-5 flex justify-between items-center fixed top-0 w-full bg-white z-50  backdrop-blur-md 
-    bg-opacity-60
+    bg-opacity-5
     "
     >
       <Link href={"/"}>
@@ -24,7 +24,7 @@ const Navbar = () => {
       <div>
         <Link
           href={"/contact"}
-          className="text-base_black text-lg py-4 px-8 rounded-full border-base_black border"
+          className="text-base_black text-lg py-4 px-8 rounded-full border-base_black border bg-white"
         >
           Hubungi Kami
         </Link>

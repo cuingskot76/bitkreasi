@@ -1,9 +1,9 @@
 "use client";
-import React, { useRef, useState } from "react";
+
+import React, { useState } from "react";
 
 function Cta() {
   const [open, setOpen] = useState(false);
-  const cancelButtonRef = useRef(null);
 
   const openModal = () => {
     setOpen(true);
@@ -15,20 +15,17 @@ function Cta() {
 
   return (
     <div>
-      <div className="mx-10 my-16 bg-[#3479FF] px-14 py-14 rounded-[40px]">
-        <h2 className="font-medium text-[40px] text-white">
-          PUNYA PROJEK MENARIK?
-        </h2>
-        <h2 className="font-medium text-[40px] text-white">
+      <div className="mx-10 mt-32 mb-10 bg-primary p-14 rounded-[40px]">
+        <h2 className="font-medium text-[40px] leading-[49px] text-white border-b pb-10">
+          PUNYA PROJEK MENARIK? <br />
           JANGAN RAGU UNTUK MENGHUBUNGI KITA!
         </h2>
-        <div className="border border-white my-10"></div>
-        <div className="flex gap-4">
-          <button className="text-xl font-semibold py-4 px-8 text-[#3479FF] gap-2 bg-white rounded-[400px]">
+        <div className="flex gap-4 pt-10">
+          <button className="text-xl font-semibold py-4 px-8 text-primary gap-2 bg-white rounded-full">
             MULAI PROJEK BARU
           </button>
           <button
-            className="text-xl font-semibold py-4 px-8 gap-2 rounded-[400px] border border-white text-white hover:bg-blue-700 hover:border-blue-700 "
+            className="text-xl font-semibold py-4 px-8 gap-2 rounded-full border border-white text-white hover:bg-blue-700 hover:border-blue-700 "
             onClick={openModal}
           >
             KIRIM EMAIL
@@ -61,7 +58,7 @@ function Cta() {
               />
               <button
                 onClick={closeModal}
-                className="bg-[#3479FF] hover:bg-blue-700 text-white font-bold py-2 px-4 gap-2 rounded-xl"
+                className="bg-primary hover:bg-blue-700 text-white font-bold py-2 px-4 gap-2 rounded-xl"
               >
                 Kirim
               </button>
