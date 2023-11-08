@@ -20,6 +20,7 @@ const config: Config = {
         greyscale: "#F2F4F8",
         greyscale_label: "#626262",
         greyscale_dark: "#D6DBE5",
+        greyscale_border: "#D1D1D1",
         base_black: "#272E38",
       },
       keyframes: {
