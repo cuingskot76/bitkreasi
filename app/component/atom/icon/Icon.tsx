@@ -9,6 +9,7 @@ interface IconProps {
     | "arrow-down"
     | "star"
     | "bitkreasi-icon"
+    | "bitkreasi-icon-2"
     | "dot"
     | "location"
     | "phone"
@@ -20,10 +21,13 @@ interface IconProps {
     | "align-right-0"
     | "align-right-1"
     | "align-right-2"
-    | "align-right-3";
+    | "align-right-3"
+    | "hamburger-menu"
+    | "hamburger-menu-close";
+  className?: string;
 }
 
-const Icon = ({ name }: IconProps) => {
+const Icon = ({ name, className }: IconProps) => {
   switch (name) {
     case "bitkreasi":
       return (
@@ -144,6 +148,7 @@ const Icon = ({ name }: IconProps) => {
           viewBox="0 0 26 25"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          className={className}
         >
           <path
             d="M12.2686 0.625235C12.3676 0.101299 13.1084 0.0754299 13.2436 0.591187L15.5714 9.46768C15.6204 9.65445 15.7726 9.79633 15.9623 9.83216L24.9795 11.5351C25.5035 11.6341 25.5293 12.3748 25.0136 12.5101L16.1371 14.8379C15.9503 14.8869 15.8084 15.039 15.7726 15.2288L14.0697 24.246C13.9707 24.7699 13.2299 24.7958 13.0947 24.28L10.7669 15.4036C10.7179 15.2168 10.5658 15.0749 10.376 15.0391L1.35877 13.3361C0.834833 13.2372 0.808963 12.4964 1.32472 12.3612L10.2012 10.0333C10.388 9.98436 10.5299 9.83222 10.5657 9.64248L12.2686 0.625235Z"
@@ -271,6 +276,7 @@ const Icon = ({ name }: IconProps) => {
           viewBox="0 0 100 80"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          className={className}
         >
           <path
             d="M87.5 15H12.5"
@@ -310,6 +316,7 @@ const Icon = ({ name }: IconProps) => {
           viewBox="0 0 72 151"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          className={className}
         >
           <path
             fillRule="evenodd"
@@ -340,6 +347,7 @@ const Icon = ({ name }: IconProps) => {
           viewBox="0 0 173 72"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          className={className}
         >
           <path
             fillRule="evenodd"
@@ -370,6 +378,7 @@ const Icon = ({ name }: IconProps) => {
           viewBox="0 0 80 100"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          className={className}
         >
           <path
             d="M15 12.5L15 87.5"
@@ -409,6 +418,7 @@ const Icon = ({ name }: IconProps) => {
           viewBox="0 0 73 151"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          className={className}
         >
           <path
             fillRule="evenodd"
@@ -439,6 +449,7 @@ const Icon = ({ name }: IconProps) => {
           viewBox="0 0 100 80"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          className={className}
         >
           <path
             d="M12.5 15H87.5"
@@ -478,6 +489,7 @@ const Icon = ({ name }: IconProps) => {
           viewBox="0 0 151 73"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          className={className}
         >
           <path
             fillRule="evenodd"
@@ -508,6 +520,7 @@ const Icon = ({ name }: IconProps) => {
           viewBox="0 0 80 100"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          className={className}
         >
           <path
             d="M15 12.5L15 87.5"
@@ -536,6 +549,77 @@ const Icon = ({ name }: IconProps) => {
             strokeWidth="1.5"
             strokeLinecap="round"
             strokeLinejoin="round"
+          />
+        </svg>
+      );
+    case "bitkreasi-icon-2":
+      return (
+        <svg
+          width="24"
+          height="34"
+          viewBox="0 0 24 34"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M0.897439 0C0.401798 0 0 0.401796 0 0.897437V24.0963C0 29.0527 4.01798 33.0706 8.97439 33.0706C9.47004 33.0706 9.87183 32.6688 9.87183 32.1732V8.97439C9.87183 4.01797 5.85386 0 0.897439 0ZM14.1496 14.8078C13.1501 14.8078 12.3398 15.6181 12.3398 16.6176V31.2609C12.3398 32.2604 13.1501 33.0707 14.1496 33.0707C19.1474 33.0707 23.1988 28.937 23.1988 23.9393C23.1988 18.9415 19.1474 14.8078 14.1496 14.8078Z"
+            fill="#3479FF"
+          />
+          <rect
+            x="13.8206"
+            y="1.4808"
+            width="7.89747"
+            height="7.89747"
+            rx="3.94873"
+            fill="#FE9B53"
+          />
+        </svg>
+      );
+    case "hamburger-menu":
+      return (
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M3 7H21"
+            stroke="#272E38"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+          />
+          <path
+            d="M3 12H21"
+            stroke="#272E38"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+          />
+          <path
+            d="M3 17H21"
+            stroke="#272E38"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+          />
+        </svg>
+      );
+    case "hamburger-menu-close":
+      return (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          className="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6 18L18 6M6 6l12 12"
           />
         </svg>
       );
