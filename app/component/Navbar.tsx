@@ -1,35 +1,156 @@
-import React from "react";
+"use client";
+
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Icon from "@/app/component/atom/icon/Icon";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [currentPos, setCurrentPos] = useState(0);
+  const [currentPostMobile, setCurrentPostMobile] = useState(0);
+
+  const handleScroll = () => {
+    setCurrentPos(window.scrollY);
+    setCurrentPostMobile(window.scrollY);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const path = window?.location?.hash;
+
+  console.log("post movile", currentPostMobile);
+
   return (
-    <nav
-      className="max-w-[1512px] font-medium mx-auto px-10 py-5 flex justify-between items-center fixed top-0 w-full bg-white z-50  backdrop-blur-md 
-    bg-opacity-5
-    "
-    >
-      <Link href={"/"}>
-        <Icon name="bitkreasi" />
-      </Link>
+    <header>
+      <nav
+        className={`p-5 flex justify-between items-center  fixed top-0 w-full z-50 ${
+          isOpen ? "bg-white" : "backdrop-blur-md bg-opacity-5"
+        }`}
+      >
+        <div className="block md:hidden">
+          <Link href={"/"} className={``}>
+            <Icon name="bitkreasi-icon-2" />
+          </Link>
+        </div>
+        <div className="hidden md:block">
+          <Link href={"/"} className={``}>
+            <Icon name="bitkreasi" />
+          </Link>
+        </div>
 
-      <div className="bg-greyscale text-lg rounded-full">
-        <button className="bg-base_black text-white py-4 px-8 rounded-full">
-          Beranda
-        </button>
-        <button className="px-8 py-4">Layanan</button>
-        <button className="px-8 py-4">Projek Kami</button>
-      </div>
+        <div className="hidden md:flex bg-greyscale text-lg rounded-full">
+          <Link href={"/"}>
+            <div
+              className={` px-6 py-3 lg:px-8 lg:py-4 rounded-full  ${
+                currentPos < 736 &&
+                (path === "" || path === "#service" || path === "#project")
+                  ? "active-link"
+                  : ""
+              }`}
+            >
+              Beranda
+            </div>
+          </Link>
+          <Link href={"#service"}>
+            <div
+              className={` px-6 py-3 lg:px-8 lg:py-4 rounded-full ${
+                currentPos >= 736 &&
+                currentPos <= 2512 &&
+                (path === "#service" || path === "" || path === "#project")
+                  ? "active-link"
+                  : ""
+              }`}
+            >
+              Layanan
+            </div>
+          </Link>
+          <Link href={"#project"}>
+            <div
+              className={` px-6 py-3 lg:px-8 lg:py-4 rounded-full ${
+                currentPos >= 2512 &&
+                (path === "#project" || path === "" || path === "#service")
+                  ? "active-link"
+                  : ""
+              }`}
+            >
+              Projek Kami
+            </div>
+          </Link>
+        </div>
 
-      <div>
         <Link
-          href={"/contact"}
-          className="text-base_black text-lg py-4 px-8 rounded-full border-base_black border bg-white"
+          href={"/"}
+          className="hidden md:block text-base_black text-lg px-6 py-3 lg:px-8 lg:py-4 rounded-full border-base_black border bg-white"
         >
           Hubungi Kami
         </Link>
+
+        <div className="flex md:hidden gap-2 items-center">
+          <Link
+            href={"/"}
+            className={`${
+              isOpen ? "block" : "hidden"
+            } text-base_black text-xs py-2 px-3 rounded-full border-base_black border bg-white`}
+          >
+            Hubungi Kami
+          </Link>
+
+          {/* hamburger */}
+          <div
+            onClick={() => setIsOpen((prev) => !prev)}
+            className={`${
+              isOpen && "open"
+            } flex flex-col items-center w-fit gap-[7px] cursor-pointer md:hidden z-50`}
+          >
+            <span className="transition-all duration-500 ease-in-out h-[2px] w-5 bg-base_black rounded-full"></span>
+            <span className="transition-all duration-500 ease-in-out h-[2px] w-4 bg-base_black rounded-full"></span>
+            <span className="transition-all duration-500 ease-in-out h-[2px] w-5 bg-base_black rounded-full"></span>
+          </div>
+        </div>
+      </nav>
+
+      {/* navbar-menu__mobile */}
+      <div className={`fixed w-full md:hidden top-0 z-40`}>
+        <div
+          className={`flex flex-col absolute top-[74px] left-0 right-0 p-5 gap-6 bg-white border-t border-greyscale_label ${
+            isOpen ? "translate-y-0" : "-translate-y-[130%]"
+          } transition-all duration-500 ease-in-out`}
+        >
+          <Link
+            href={"/"}
+            className={`${
+              currentPostMobile < 644 && "text-sky-400"
+            } text-base font-medium hover:text-sky-400 transition-all duration-200`}
+            onClick={() => setIsOpen(false)}
+          >
+            Beranda
+          </Link>
+          <Link
+            href={"#service"}
+            className={`${
+              currentPostMobile >= 644 &&
+              currentPostMobile < 3025 &&
+              "text-sky-400"
+            } text-base font-medium hover:text-sky-400 transition-all duration-200`}
+            onClick={() => setIsOpen(false)}
+          >
+            Layanan
+          </Link>
+          <Link
+            href={"#project"}
+            className={`${
+              currentPostMobile >= 3025 && "text-sky-400"
+            } text-base font-medium hover:text-sky-400 transition-all duration-200`}
+            onClick={() => setIsOpen(false)}
+          >
+            Projek Kami
+          </Link>
+        </div>
       </div>
-    </nav>
+    </header>
   );
 };
 
