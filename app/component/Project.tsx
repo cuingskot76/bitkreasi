@@ -1,4 +1,5 @@
 "use client";
+
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -15,40 +16,38 @@ export default function Project() {
   };
 
   return (
-    <div className="mx-10 my-16">
-      <h1 className="font-semibold text-5xl">PROJEK FAVORIT KAMI</h1>
-      <div className="grid grid-cols-2 mt-10 gap-6">
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={imageVariants}
-          className="image-item"
-        >
-          <Image alt="project" src={example} className="rounded-3xl" />
+    <div id="project" className="mx-5 my-14">
+      <h1 className="font-semibold text-xl text-center lg:text-5xl">
+        PROJEK FAVORIT KAMI
+      </h1>
+      <div className="grid grid-cols-1 lg:grid-cols-2 mt-3 gap-2">
+        <motion.div initial="hidden" animate="visible" variants={imageVariants}>
+          <Image
+            alt="project"
+            src={example}
+            className="rounded-xl lg:rounded-3xl"
+          />
         </motion.div>
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={imageVariants}
-          className="image-item"
-        >
-          <Image alt="project" src={example} className="rounded-3xl" />
+        <motion.div initial="hidden" animate="visible" variants={imageVariants}>
+          <Image
+            alt="project"
+            src={example}
+            className="rounded-xl lg:rounded-3xl"
+          />
         </motion.div>
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={imageVariants}
-          className="image-item"
-        >
-          <Image alt="project" src={example} className="rounded-3xl" />
+        <motion.div initial="hidden" animate="visible" variants={imageVariants}>
+          <Image
+            alt="project"
+            src={example}
+            className="rounded-xl lg:rounded-3xl"
+          />
         </motion.div>
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={imageVariants}
-          className="image-item"
-        >
-          <Image alt="project" src={example} className="rounded-3xl" />
+        <motion.div initial="hidden" animate="visible" variants={imageVariants}>
+          <Image
+            alt="project"
+            src={example}
+            className="rounded-xl lg:rounded-3xl"
+          />
         </motion.div>
       </div>
       <style jsx global>{`

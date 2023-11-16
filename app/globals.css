@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+  scroll-padding-top: 120px; /* height of your navbar */
+}
+
+/* hamburger */
+.open span:nth-child(1) {
+  transform: rotate(45deg) translate(6.5px, 6.5px);
+}
+
+.open span:nth-child(2) {
+  width: 0;
+  opacity: 0;
+}
+
+.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(6.5px, -6.5px);
+}
+
+.active-link {
+  background-color: #272e38;
+  color: #fff;
+  transition: all 0.5s ease-in-out;
+}
