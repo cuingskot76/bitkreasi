@@ -19,9 +19,10 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const path = window?.location?.hash;
-
-  console.log("post movile", currentPostMobile);
+  let path;
+  if (typeof window !== "undefined") {
+    path = window.location.hash;
+  }
 
   return (
     <header>
