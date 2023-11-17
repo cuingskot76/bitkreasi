@@ -19,10 +19,12 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  let path;
+  let path = "";
   if (typeof window !== "undefined") {
     path = window.location.hash;
   }
+
+  console.log("pdat", path === "" && currentPos < 736);
 
   return (
     <header>

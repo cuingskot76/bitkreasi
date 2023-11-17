@@ -23,9 +23,7 @@ const Hero = () => {
             hebat
           </span>
         </div>
-        {/* CHANGE: in the design when mobile, font-size is text-sm */}
-        {/* CHANGE: in the design when default(windows), font-size is text-lg */}
-        <div className="max-w-4xl text-lg lg:text-xl mx-auto mt-3 lg:mt-4 text-center font-normal text-greyscale_label">
+        <div className="max-w-4xl text-sm md:text-lg mx-auto mt-3 lg:mt-4 text-center font-normal text-greyscale_label">
           <span>
             {/* Kami adalah tim yang berdedikasi untuk mengubah ide-ide brilian Anda
           menjadi solusi digital yang luar biasa. <br /> Dari desain UI/UX yang
@@ -35,8 +33,8 @@ const Hero = () => {
             memukau hingga pengembangan website dan aplikasi yang unik.
           </span>
         </div>
-        <div className="flex justify-center mt-10 ">
-          <button className="uppercase py-3 px-[18px] lg:py-4 lg:px-8 rounded-full bg-primary text-white font-medium lg:font-semibold text-xl ">
+        <div className="flex justify-center mt-8 md:mt-9 lg:mt-10">
+          <button className="uppercase py-3 px-[18px] md:py-4 md:px-8 rounded-full bg-primary text-white font-medium md:font-semibold text-xs md:text-lg lg:text-xl ">
             Mulai project baru
           </button>
         </div>
@@ -72,7 +70,7 @@ const Hero = () => {
             return (
               <div
                 key={index}
-                className="flex text-white items-center font-semibold text-sm lg:text-2xl w-full whitespace-nowrap py-2 lg:py-6 uppercase "
+                className="flex text-white items-center font-semibold text-sm md:text-lg lg:text-2xl w-full whitespace-nowrap py-2 md:py-4 lg:py-6 uppercase "
               >
                 <span>{item}</span>
                 <div className="px-2 lg:px-[10px]">
@@ -90,7 +88,7 @@ const Hero = () => {
             return (
               <div
                 key={index}
-                className="flex text-white items-center font-semibold text-sm lg:text-2xl w-full whitespace-nowrap py-2 lg:py-6 uppercase "
+                className="flex text-white items-center font-semibold text-sm md:text-lg lg:text-2xl w-full whitespace-nowrap py-2 md:py-4 lg:py-6 uppercase "
               >
                 <span>{item}</span>
                 <div className="px-2 lg:px-[10px]">
