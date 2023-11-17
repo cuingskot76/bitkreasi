@@ -16,11 +16,14 @@ export default function Project() {
   };
 
   return (
-    <div id="project" className="mx-5 my-14">
-      <h1 className="font-semibold text-xl text-center lg:text-5xl">
+    <div
+      id="project"
+      className="mx-5 lg:mx-10 my-16 flex flex-col gap-3 md:gap-8 lg:gap-10"
+    >
+      <h1 className="font-semibold text-center  text-xl md:text-2xl lg:text-5xl">
         PROJEK FAVORIT KAMI
       </h1>
-      <div className="grid grid-cols-1 lg:grid-cols-2 mt-3 gap-2">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-7">
         <motion.div initial="hidden" animate="visible" variants={imageVariants}>
           <Image
             alt="project"
