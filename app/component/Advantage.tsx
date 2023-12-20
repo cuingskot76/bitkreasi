@@ -30,7 +30,7 @@ const OurAdvantage = [
 
 const Advantage = () => {
   return (
-    <div className="mx-5 lg:mx-10 lg:py-16 flex gap-3 md:gap-8 lg:gap-12 justify-between flex-col xl:flex-row">
+    <div className="max-w-7xl mx-auto px-5 lg:py-16 flex gap-3 md:gap-8 lg:gap-12 justify-between flex-col xl:flex-row">
       <div className="flex flex-col gap-5 max-w-md lg:max-w-3xl xl:max-w-md">
         <h3 className="uppercase text-xl md:text-2xl lg:text-5xl font-semibold">
           Keunggulan Kami
@@ -41,11 +41,11 @@ const Advantage = () => {
           lain
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-3 ">
         {OurAdvantage.map((advantage, i) => (
           <div
             key={advantage.id}
-            className={`flex flex-col bg-base_black rounded-2xl lg:rounded-[30px] text-white relative overflow-hidden py-3 pr-6 pl-12 md:py-6 md:px-8 lg:p-8 h-[136px] md:h-full lg:h-[250px] 2xl:w-[450px]`}
+            className={`flex flex-col bg-base_black rounded-2xl lg:rounded-[30px] text-white relative overflow-hidden py-3 pr-6 pl-12 md:py-6 md:px-8 lg:p-8 h-[136px] md:h-full lg:h-[250px]`}
           >
             <div
               className={`${i === 0 && "lg:pl-16"} ${
