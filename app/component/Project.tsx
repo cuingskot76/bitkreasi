@@ -18,7 +18,7 @@ export default function Project() {
   return (
     <div
       id="project"
-      className="mx-5 lg:mx-10 my-16 flex flex-col gap-3 md:gap-8 lg:gap-10"
+      className="max-w-7xl mx-auto px-5 lg:px-10 my-16 flex flex-col gap-3 md:gap-8 lg:gap-10"
     >
       <h1 className="font-semibold text-center  text-xl md:text-2xl lg:text-5xl">
         PROJEK FAVORIT KAMI

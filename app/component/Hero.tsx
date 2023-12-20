@@ -16,7 +16,7 @@ const tickerData = [
 const Hero = () => {
   return (
     <section className="mt-24 md:mt-36 lg:mt-48 pb-20 ">
-      <div className=" px-5 ">
+      <div className="max-w-7xl mx-auto px-5 ">
         <div className="max-w-[1384px] mx-auto text-center ">
           <span className="font-semibold text-3xl md:text-5xl lg:text-[64px] lg:leading-[78.72px] uppercase whitespace-break-spaces">
             Kami membuat aplikasi dan website dengan pengalaman produk yang
@@ -25,18 +25,18 @@ const Hero = () => {
         </div>
         <div className="max-w-4xl text-sm md:text-lg mx-auto mt-3 lg:mt-4 text-center font-normal text-greyscale_label">
           <span>
-            {/* Kami adalah tim yang berdedikasi untuk mengubah ide-ide brilian Anda
-          menjadi solusi digital yang luar biasa. <br /> Dari desain UI/UX yang
-          memukau hingga pengembangan website dan aplikasi yang unik. */}
             Kami adalah tim yang berdedikasi untuk mengubah ide-ide brilian Anda
             menjadi solusi digital yang luar biasa. Dari desain UI/UX yang
             memukau hingga pengembangan website dan aplikasi yang unik.
           </span>
         </div>
         <div className="flex justify-center mt-8 md:mt-9 lg:mt-10">
-          <button className="uppercase py-3 px-[18px] md:py-4 md:px-8 rounded-full bg-primary text-white font-medium md:font-semibold text-xs md:text-lg lg:text-xl ">
+          <a
+            href={"mailto:halo@bitkreasi.id"}
+            className="uppercase py-3 px-[18px] md:py-4 md:px-8 rounded-full bg-primary text-white font-medium md:font-semibold text-xs md:text-lg lg:text-xl"
+          >
             Mulai project baru
-          </button>
+          </a>
         </div>
       </div>
 

@@ -24,15 +24,13 @@ const Navbar = () => {
     path = window.location.hash;
   }
 
-  console.log("pdat", path === "" && currentPos < 736);
-
   return (
-    <header>
-      <nav
-        className={`p-5 flex justify-between items-center  fixed top-0 w-full z-50 ${
-          isOpen ? "bg-white" : "backdrop-blur-md bg-opacity-5"
-        }`}
-      >
+    <header
+      className={`fixed top-0 left-0 right-0 z-50  ${
+        isOpen ? "bg-white" : "backdrop-blur-md bg-opacity-5 "
+      }`}
+    >
+      <nav className="max-w-7xl w-full mx-auto p-5 flex justify-between items-center">
         <div className="block md:hidden">
           <Link href={"/"} className={``}>
             <Icon name="bitkreasi-icon-2" />
@@ -84,22 +82,22 @@ const Navbar = () => {
           </Link>
         </div>
 
-        <Link
-          href={"/"}
+        <a
+          href={"mailto:halo@bitkreasi.id"}
           className="hidden md:block text-base_black text-lg px-6 py-3 lg:px-8 lg:py-4 rounded-full border-base_black border bg-white"
         >
           Hubungi Kami
-        </Link>
+        </a>
 
         <div className="flex md:hidden gap-2 items-center">
-          <Link
-            href={"/"}
+          <a
+            href={"mailto:halo@bitkreasi.id"}
             className={`${
               isOpen ? "block" : "hidden"
             } text-base_black text-xs py-2 px-3 rounded-full border-base_black border bg-white`}
           >
             Hubungi Kami
-          </Link>
+          </a>
 
           {/* hamburger */}
           <div
@@ -118,8 +116,8 @@ const Navbar = () => {
       {/* navbar-menu__mobile */}
       <div className={`fixed w-full md:hidden top-0 z-40`}>
         <div
-          className={`flex flex-col absolute top-[74px] left-0 right-0 p-5 gap-6 bg-white border-t border-greyscale_label ${
-            isOpen ? "translate-y-0" : "-translate-y-[130%]"
+          className={`flex flex-col absolute top-0 left-0 right-0 p-5 gap-6 bg-white border-t border-greyscale_label ${
+            isOpen ? "translate-y-[74px]" : "-translate-y-[100%]"
           } transition-all duration-500 ease-in-out`}
         >
           <Link
